@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td style="vertical-align:top; padding:10px; ">
+            <h2>Категории</h2>
+            <ul>
+            {% for category in categories %}
+                <li><a href='{{category.slug}}'>{{category.name}}</a></li>
+            {% endfor %}
+            </ul>
+        </td>
+        <td style="vertical-align:top; padding:10px 0px 0px 150px;">
+            <h2>Краткий вывод всех постов</h2>
+            {% for post in posts %}
+                <div style="padding-bottom:20px;">
+                    <h3><a href="#">{{post.title}}</a></h3>
+                    <p>{{post.mini_text}}</p>
+                    дата: {{post.created_date}}
+                </div>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models import Category
+from .models import Category, Tag, Post, Comment, PostAdmin
 
 
-admin.site.register(Category) #отображение категорий в админке
+admin.site.register(Category)
+admin.site.register(Tag)
+admin.site.register(Post, PostAdmin)
+admin.site.register(Comment)
